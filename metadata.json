@@ -1,0 +1,10 @@
+{
+  "name": "Zed Search Provider",
+  "description": "Search for your Zed workspaces easily",
+  "uuid": "zed-search-provider@hron.github.com",
+  "url": "https://github.com/hron/zed-search-provider",
+  "donations": {
+    "github": "hron"
+  },
+  "shell-version": ["45", "46", "47", "48"]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "zed-search-provider",
+  "version": "1",
+  "description": "Provide search results from Zed",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hron/zed-search-provider.git"
+  },
+  "author": "Aleksei Gusev <aleksei.gusev@gmail.com>",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hron/zed-search-provider/issues"
+  },
+  "homepage": "https://github.com/hron/zed-search-provider#readme",
+  "sideEffects": false,
+  "config": {
+    "domain": "hron.github.com"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .  -c eslint.config.js",
+    "lint:fix": "eslint --fix . -c eslint.config.js",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "clean": "rm -rf dist && rm -f ${npm_package_name}.zip",
+    "pack": "npm run clean && npm run build && cp metadata.json dist && cd dist && zip ../${npm_package_name}.zip -9r .",
+    "install-extension": "touch $XDG_DATA_HOME/gnome-shell/extensions/${npm_package_name}@${npm_package_config_domain} && rm -rf $XDG_DATA_HOME/gnome-shell/extensions/${npm_package_name}@${npm_package_config_domain} && mv dist $XDG_DATA_HOME/gnome-shell/extensions/${npm_package_name}@${npm_package_config_domain}",
+    "setup": "npm run pack && npm run install-extension",
+    "debug": "dbus-run-session -- gnome-shell --nested --wayland",
+    "prepare": "simple-git-hooks",
+    "test": "node --loader ./tests/mocks/loader.js --loader tsm node_modules/.bin/uvu ./tests \\.spec\\.js$"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm run format"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@types/node": "^20.14.2",
+    "bumpp": "^9.4.1",
+    "esbuild": "^0.25.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "globals": "^15.2.0",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "semantic-release": "^23.1.1",
+    "simple-git-hooks": "^2.11.1",
+    "tsm": "^2.3.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0",
+    "uvu": "^0.5.6"
+  },
+  "dependencies": {
+    "@girs/gda-5.0": "^5.0.0-4.0.0-beta.23",
+    "@girs/gjs": "^4.0.0-beta.5",
+    "@girs/gnome-shell": "^46.0.0-beta8"
+  }
+}
