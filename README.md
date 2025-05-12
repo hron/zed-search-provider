@@ -15,9 +15,9 @@ The Zed Search Provider Extension is a GNOME Shell extension that launches Zed f
 
 ## Installation
 
-## Install requirements
+### Install requirements
 
-- Debian/Ubuntu: sudo apt-get install gir1.2-gda-5.0
+- Debian/Ubuntu: `sudo apt-get install gir1.2-gda-5.0`
 
 ### Installing via Gnome Extensions
 
