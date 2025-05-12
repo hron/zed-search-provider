@@ -1,4 +1,4 @@
-# Emacs Search Provider
+# Zed Search Provider
 
 ![GitHub License](https://img.shields.io/github/license/hron/zed-search-provider) [![Lint](https://github.com/hron/zed-search-provider/actions/workflows/eslint.yml/badge.svg)](https://github.com/hron/zed-search-provider/actions/workflows/eslint.yml) ![GNOME Extensions download](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fextensions.gnome.org%2Fextension%2F7777%2Fzed-search-provider%2F&query=%2Fhtml%2Fbody%2Fdiv%5B2%5D%2Fdiv%2Fdiv%5B2%5D%2Fdiv%5B1%5D%2Fspan%5B3%5D&logo=gnome&label=GNOME%20extensions&cacheSeconds=86400)
 
@@ -34,7 +34,7 @@ For the latest development version, you may need to ensure `git` and `node` are 
 Following installation, the extension must be enabled.
 
 - Restart GNOME Shell (`Alt` + `F2`, `r`, `Enter`, or Log-Out/Log-In if operating on Wayland)
-- The _Emacs Search Provider_ extension should now appear in the _Extensions_ application. If not visible, reopen the application to refresh the data, and you can then enable it.
+- The _Zed Search Provider_ extension should now appear in the _Extensions_ application. If not visible, reopen the application to refresh the data, and you can then enable it.
 
 ## Contribution
 
