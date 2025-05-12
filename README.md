@@ -1,6 +1,6 @@
 # Zed Search Provider
 
-![GitHub License](https://img.shields.io/github/license/hron/zed-search-provider) [![Lint](https://github.com/hron/zed-search-provider/actions/workflows/eslint.yml/badge.svg)](https://github.com/hron/zed-search-provider/actions/workflows/eslint.yml) ![GNOME Extensions download](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fextensions.gnome.org%2Fextension%2F7777%2Fzed-search-provider%2F&query=%2Fhtml%2Fbody%2Fdiv%5B2%5D%2Fdiv%2Fdiv%5B2%5D%2Fdiv%5B1%5D%2Fspan%5B3%5D&logo=gnome&label=GNOME%20extensions&cacheSeconds=86400)
+![GitHub License](https://img.shields.io/github/license/hron/zed-search-provider) [![Lint](https://github.com/hron/zed-search-provider/actions/workflows/eslint.yml/badge.svg)](https://github.com/hron/zed-search-provider/actions/workflows/eslint.yml) ![GNOME Extensions download](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fextensions.gnome.org%2Fextension%2F8109%2Fzed-search-provider%2F&query=%2Fhtml%2Fbody%2Fdiv%5B2%5D%2Fdiv%2Fdiv%5B2%5D%2Fdiv%5B1%5D%2Fspan%5B3%5D&logo=gnome&label=GNOME%20extensions&cacheSeconds=86400)
 
 ## Description
 
@@ -15,9 +15,13 @@ The Zed Search Provider Extension is a GNOME Shell extension that launches Zed f
 
 ## Installation
 
+## Install requirements
+
+- Debian/Ubuntu: sudo apt-get install gir1.2-gda-5.0
+
 ### Installing via Gnome Extensions
 
-[<img alt="" height="100" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true">](https://extensions.gnome.org/extension/7777//)
+[<img alt="" height="100" src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/master/get-it-on-ego.svg?sanitize=true">](https://extensions.gnome.org/extension/8109/)
 
 ### Installing from the GitHub Repository
 
