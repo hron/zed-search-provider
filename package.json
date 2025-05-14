@@ -1,6 +1,6 @@
 {
   "name": "zed-search-provider",
-  "version": "1",
+  "version": "2",
   "description": "Provide search results from Zed",
   "type": "module",
   "private": true,
