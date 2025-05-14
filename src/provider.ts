@@ -92,7 +92,11 @@ export default class ZedSearchProvider<T extends Extension>
   activateResult(path: string): void {
     if (this.app) {
       try {
-        this.app?.app_info.launch([Gio.file_new_for_path(path)], null);
+        const normalizedPath = this._resolveHomePath(path);
+        this.app?.app_info.launch(
+          [Gio.file_new_for_path(normalizedPath)],
+          null,
+        );
       } catch (e) {
         console.error(e);
       }
@@ -126,5 +130,9 @@ export default class ZedSearchProvider<T extends Extension>
       description: project,
       createIcon: (size: number) => this.app?.create_icon_texture(size),
     }));
+  }
+
+  _resolveHomePath(path: string): string {
+    return path.replace(/^~/, Glib.get_home_dir());
   }
 }
